@@ -16,10 +16,25 @@ class ExampleComponent extends Component<SampleProps, SampleState> {
         increment: this.props.increment || 1 // set default value here
     }
 
+    // Constructor version
+    // constructor(props: SampleProps) {
+    //     super(props);
+    //     this.state = {
+    //         count: 0,
+    //         increment: this.props.increment || 1 // set default value here
+    //     }
+
     modifyCount = (amount: number) => () => {
-        this.setState({
-            count: this.state.count + amount // use state.increment here
-        })
+        this.setState((prevState) => ({
+            count: prevState.count + amount
+        }));
+
+        // This is the same as above
+        // this.setState((state) => {
+        //     return {
+        //         count: state.count + amount
+        //     }
+        // })
     }
 
     render() {

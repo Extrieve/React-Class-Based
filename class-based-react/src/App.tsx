@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello From Sample React Project</h1>
-      <ExampleComponent />
+      <ExampleComponent increment={10}/>
     </div>
   )
 }
