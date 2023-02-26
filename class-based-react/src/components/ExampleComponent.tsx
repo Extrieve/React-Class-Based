@@ -23,6 +23,9 @@ class ExampleComponent extends Component<SampleProps, SampleState> {
     //         count: 0,
     //         increment: this.props.increment || 1 // set default value here
     //     }
+    //    this.modifyCount = this.modifyCount.bind(this); // bind this to the function 
+    //    -> Required for older versions of React ########################################
+    // }
 
     modifyCount = (amount: number) => () => {
         this.setState((prevState) => ({
