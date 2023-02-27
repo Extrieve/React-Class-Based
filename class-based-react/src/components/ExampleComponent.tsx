@@ -40,6 +40,10 @@ class ExampleComponent extends Component<SampleProps, SampleState> {
         // })
     }
 
+    componentDidMount() { // Sort of like useEffect, runs after the component is mounted e.g. after the first render
+        console.log("Component mounted");
+    }
+
     render() {
         return (
             <div>
